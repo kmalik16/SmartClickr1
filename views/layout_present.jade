@@ -1,0 +1,43 @@
+!!! 5
+html
+	head
+		title= title
+		meta(name='viewport', content='width=device-width')
+		link(rel='stylesheet', type='text/css', href='/css/landing.css', media='screen')
+		link(rel='stylesheet', type='text/css', href='/css/main.css', media='screen')
+		link(rel='stylesheet', type='text/css', href='/css/bootstrap.css', media='screen')
+		link(rel='stylesheet', type='text/css', href='/css/bootstrap-responsive.css', media='screen')
+		link(rel='stylesheet', type='text/css', href='/css/jquery-ui-1.9.2.custom.min.css')
+		
+		// Add Jquery //
+		script(type='text/javascript', src='http://code.jquery.com/jquery-latest.min.js')
+
+		// Add Bootstrap Library //
+		script(type='text/javascript', src='/bootstrap/bootstrap.min.js')
+
+		// Socket.io
+		script(type='text/javascript', src='/socket.io/socket.io.js')
+
+		// D3 Library
+		script(type="text/javascript", src='http://d3js.org/d3.v3.min.js')
+
+		// D3 Scripts
+		// include file 
+		script(type='text/javascript', src='/javascript/d3/info-config.js')
+		script(type='text/javascript', src='/javascript/d3/pie.js')
+		script(type='text/javascript', src='/javascript/d3/vert_bars.js')
+		
+		// Add Less //
+		script(type="text/javascript", src='/less.js')
+		noscript
+			div(id="no-js", class="modal") 
+				div(class="modal-header")
+					p JavaScript has been turned off.
+					p Please enable to view full site and get full use of our product. 
+
+				div(class="modal-footer")
+					a(href="http://www.enable-javascript.com", target="_blank")  This article can tell you why Javascript is important and how to turn it on
+			div(class="modal-backdrop")
+		
+	body
+		block content

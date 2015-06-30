@@ -1,0 +1,48 @@
+#error-content{
+	padding: 23.5px !important;
+	border-radius: 6px;	
+	background: #fff !important;
+	position: relative;
+}
+
+.top-pad{
+	padding-top: 45px;
+}
+
+#hero{
+	margin-bottom: 20px;
+}
+
+
+.explain{
+	padding: 23.5px;
+	background:#edeae3;
+}
+
+.explain p{
+	margin: 0 0 20px;
+}
+
+p.error-actions{
+	margin: 0 auto !important;
+	text-align: center !important;
+	padding-top: 16px;
+	color: #fff;
+	padding-bottom: 30px;
+	
+}
+
+p.error-actions span{
+	padding: 40px;
+}
+
+p.error-actions a{
+	color:#fff;
+}
+
+canvas{
+	margin: 0 auto 26px;
+	border: 2px solid #3f4b51;
+	
+}
+

@@ -1,0 +1,55 @@
+
+*** These modified files were found in JOE when it aborted on Fri Mar 29 11:00:35 2013
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+.git/COMMIT_EDITMSG
+
+*** File '.git/COMMIT_EDITMSG'
+Merge branch 'master' of https://github.com/danielto0252/SmartClickR2
+
+Conflicts:
+	.DS_Store
+	routes/.DS_Store
+#
+# It looks like you may be committing a MERGE.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+#
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: smartclickr <smartclickr@ds2676.dreamservers.com>
+#
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 8 different commit(s) each, respectively.
+#
+# Changes to be committed:
+#
+#	modified:   ../app.js
+#	modified:   ../node_modules/express-alias/index.js
+#	modified:   ../public/css/bootstrap.css
+#	modified:   ../public/css/main.css
+#	modified:   ../public/css/main.less
+#	modified:   ../public/css/test.css
+#	modified:   ../public/javascript/d3/pie.js
+#	modified:   ../public/javascript/views/create-poll.js
+#	modified:   ../public/javascript/views/edit-poll.js
+#	modified:   ../public/javascript/views/settings.js
+#	modified:   .DS_Store
+#	modified:   modules/account-manager.js
+#	modified:   modules/format-manager.js
+#	modified:   modules/poll-manager.js
+#	modified:   modules/question-manager.js
+#	modified:   modules/response-manager.js
+#	modified:   poll.js
+#	modified:   question.js
+#	modified:   ../views/account.jade
+#	modified:   ../views/edit-poll.jade
+#	modified:   ../views/layout_playground.jade
+#	modified:   ../views/playground-hometest1.jade
+#	modified:   ../views/playground-hometest2.jade
+#

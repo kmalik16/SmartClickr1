@@ -1,0 +1,28 @@
+[
+	{ 
+	  	"Question_ID"    : 227, 
+	  	"Poll_ID"        : 53,
+      	"QuestionsOrder" : 1,
+      	"AnswerType"	 : "MultipleChoice",
+      	"Stem"		     : "Who is your favorite actor?",
+      	"Choices"		 : [{ "Choice_ID" : 382, "ChoiceOrder" : 1, "IsCorrectChoice" : "N", "Content" : "Leonardo DiCaprio"},
+      			          { "Choice_ID" : 383, "ChoiceOrder" : 2, "IsCorrectChoice" : "N", "Content" : "Tom Hanks"},
+                                  { "Choice_ID" : 384, "ChoiceOrder" : 3, "IsCorrectChoice" : "N", "Content" : "Jamie Foxx"}]
+	},
+	{
+		"Question_ID"    : 228, 
+	  	"Poll_ID"        : 53,
+      	"QuestionsOrder" : 2,
+      	"AnswerType"	 : "FreeResponse",
+      	"Stem"		     : "What's your favorite class?",
+      	"Choices"		 : []
+	}, 
+	{
+		"Question_ID"    : 229, 
+	  	"Poll_ID"        : 53,
+      	"QuestionsOrder" : 3,
+      	"AnswerType"	 : "Numeric",
+      	"Stem"		     : "What's 1+1?",
+      	"Choices"		 : []
+	}
+]

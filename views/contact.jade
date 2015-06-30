@@ -1,0 +1,90 @@
+ 
+ 
+extends layout_contact
+
+block content
+	// Header Content //
+	header(class="navbar navbar-inverse navbar-fixed-top")
+		.navbar-inner
+			.container
+				a(class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
+					span(class="icon-bar")
+					span(class="icon-bar")
+					span(class="icon-bar")
+				a(class="brand", href="/") 
+					| SmartClickr
+					span  alpha
+				div(class="nav-collapse", style="")
+					ul(class="nav pull-right")
+						li
+
+							a(id="home", href="/") Home
+
+	#main-content
+		article#user_hero
+			.container
+				.span12
+					h2 Need to Get in Touch?
+			hr
+		section#content_container
+			.container
+				.row-fluid
+					.span12					
+						section#user_content.clearfix
+							div#content.pad
+								#sub-title
+									h4
+										span.add-on
+											i(class="icon-envelope") 
+										| Say Hello! We'd love to hear from you!
+									form(id='contact-us', class='span9', action='/contact')
+										fieldset.field
+											span
+												label(for="yourName") Your Full Name (required)
+												input(type="text", id="yourName")
+											span
+												label(for="yourEmail") Your Email Address (required)
+												input(type="text", id="yourEmail")
+											span
+												label(for="yourSubject") Subject (required)
+												input(type="text", id="yourSubject")
+											span
+												label(for="yourMessage") Message (required)
+												textarea(id="yourMessage")
+											span.span6.send-btn
+												button(type="submit", class="btn btn-info btn-large") Send your message
+									section#contact-side.span3
+										article#mail.field
+											h4 Snail Mail
+											p 
+												| SmartClickR 
+												br
+												| Attn: Brad Fischer
+												br
+												| MSC 4310
+												br
+												| 701 Carrier Drive
+												br
+												| Harrisonburg, VA, 22807
+											p
+												| P.S. We &hearts; baked goods.
+										article#facebook.field
+											h4 Facebook
+											p
+												| Stay up to date with all the latest news on features, customer testimonials and more.
+												a(href="https://www.facebook.com/smartclickr") Like Team SmartClickr &rarr;
+										article#twitter.field
+											h4 Twitter
+											p 
+												| Follow along with all our latest updates and the occasional retweet.
+												a(href="https://twitter.com/smartclickr") Follow @SmartClickr &rarr;
+
+											
+
+		.clear
+		// Footer Content //
+	include extra/footer-main
+
+	script(src="/javascript/views/contact.js")
+	script(src="/jquery.login.min.js")
+

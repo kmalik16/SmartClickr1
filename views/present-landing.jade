@@ -1,0 +1,34 @@
+extends layout_landing
+
+
+block content
+	body#landing-page
+		// Header Content //
+		header(class="navbar navbar-inverse navbar-fixed-top")
+			.navbar-inner
+				.container
+					a(class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
+						span(class="icon-bar")
+						span(class="icon-bar")
+						span(class="icon-bar")
+					a(class="brand", href="/") 
+						| SmartClickr
+						span  alpha
+					div(class="nav-collapse")
+						ul(class="nav pull-right")
+							li(class="active")
+								a(id="home", href="/") Home
+
+		.clear
+		#landing-pad.hidden-phone
+		#landing-container
+			.container		
+				.row-fluid					
+					#hero_content.span8.offset2
+						h3#sessionCode Session Code: #{locals.pdata[0].SessionCode}
+
+						h3#poll-name #{locals.pdata[0].PollName}
+						p#poll-desc.clearfix #{locals.pdata[0].PollDescription}
+						p#actions
+							a(id='starting-question', href='/user/#{locals.udata[0].User_ID}/poll/#{locals.pdata[0].Poll_ID}/question/present/#{locals.QuestionIDs[0]}', class="btn btn-success btn-large") Let's Go  &rarr;
+						

@@ -1,0 +1,83 @@
+extends layout_account
+
+block content
+	input(type = 'hidden',value = '#{locals.udata.User_ID}')#userId
+	body#account-body
+	// Header Content //
+	header(class="navbar navbar-inverse navbar-fixed-top")
+		.navbar-inner
+			.container
+				a(class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
+					span(class="icon-bar")
+					span(class="icon-bar")
+					span(class="icon-bar")
+					a(class="brand", href="/") 
+						| SmartClickr
+						span  alpha
+				div(class="nav-collapse in collapse")
+					ul(class="nav pull-right")
+						li
+							a(id="home", href="/") Home
+						li(class="active")
+							a(id='account', href='/user/edit/#{locals.udata.User_ID}') Account
+						li
+							a(id='help', href='/help') Help Center
+						li
+							a(id='logout',href='/logout') Log Out
+		
+	#acct-hero
+		.container
+			.row-fluid
+				.span8.offset2
+					h1.title Your Account
+			.clear.dropshadow
+	section#settings-container.container
+		.row-fluid
+			.span8.offset2
+				#settings-content
+					article#settings_main
+		
+						form(id='accountPasswordForm', method='post', action='/user/edit/#{locals.udata.User_ID}')
+							fieldset
+								span.field
+									label(id="passwordChangeLabel", for='currentPassword', class='form-text') Password
+									input(id='currentPassword', type='password', class='input-block-level', name='currentPassword', title='Current Password', placeholder='Current Password',  autocomplete='off')
+									.clear
+			
+									input(id='newPassword', type='password', class='input-block-level', name='NewPassword', title='New Password', placeholder='New Password', autocomplete='off')
+									.clear
+
+									input(id='reNewPassword', type='password', name='reNewPassword', class='input-block-level', title='Re-Enter New Password', placeholder='Re-Enter Password',  autocomplete='off')
+									.clear
+							fieldset.form-action
+								input(id='changePasswordBtn', type='submit', class="btn btn-info btn-large", value='Save your Password')
+
+							hr
+						div#deleteActions
+							fieldset
+								span.field
+									fieldset.form-action
+										h2 Not satisfied with SmartClickr? 
+										button(id='deleteAccountBtn', href="#deleteAcctConfirm", role="button", class="button red", data-toggle="modal") Delete your Account
+										p This will delete your account and all the polls associated with your account. This action cannot be undone
+
+				// Delete Account Modal //
+				div(id="deleteAcctConfirm", class="modal hide fade", tabindex="-1", role="dialog", aria-labellby="deleteAcctLabel",data-backdrop="static", aria-hidden="true", style="text-align: left")
+					div(class="modal-header")
+						button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+						h5(id="deleteAcctLabel") Are you sure you want to delete your account?
+						p This will remove your account, all polls associated with your account and cannot be undone
+					div(class="modal-footer")
+						button(class="btn", data-dismiss="modal", aria-hidden="true") Cancel
+						button(id="deleteAcctBtn", type="submit", formmethod="POST", formaction="/user/delete/#{locals.udata.User_ID}", class='btn btn-medium btn-danger') Delete
+
+	script(src="/javascript/views/settings.js")
+	script(src="/jquery.login.min.js")
+
+
+
+
+
+
+
+

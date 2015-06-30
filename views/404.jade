@@ -1,0 +1,42 @@
+extends layout_404
+
+
+block content
+	body(onload="play_game()")
+	// Header Content //
+	header(class="navbar navbar-inverse navbar-fixed-top")
+		.navbar-inner
+			.container
+				a(class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
+					span(class="icon-bar")
+					span(class="icon-bar")
+					span(class="icon-bar")
+				a(class="brand", href="/") SmartClickr
+				div(class="nav-collapse")
+					ul(class="nav pull-right")
+						li(class="active")
+							a(id="home", href="/") Return Home
+	.top-pad.hidden-phone
+	#hero.clearfix
+		.container
+			.row-fluid
+				.span8.offset2
+					h1.title This page got lost
+			.clear.dropshadow
+	section#error-container.container.clearfix
+		.row-fluid
+			.span8.offset2
+				#error-content
+					article#error_main
+						section.explain.clearfix
+							p We hope ninjas didnt steal this page. That would be bad. If that is the case it may never be found. 
+							p Otherwise, someone on our team is to blame for this error. Rest assured that the proper amount of blame and humiliation has been dealt to them. 
+							p.error-actions
+								span
+									a(href="/contact", class="btn btn-info btn-large") Contact
+								span
+									a(href="/", class="btn btn-info btn-large") Home
+							p.snake.visible-desktop In the meantime, you can play snake to release any anger you may be feeling
+							div#msg.visible-desktop
+							canvas(id="c", width="400", height="400", class="visible-desktop", style="display: none") Yikes your bowser does not support HTML5. 
+	script(src="/javascript/snake.js")

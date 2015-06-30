@@ -1,0 +1,80 @@
+.navbar-fixed-top, .navbar-fixed-bottom{
+	z-index: 2000 !important;
+}
+
+body{
+	background: #eee url('/img/noise.png') !important;
+	
+}
+
+#edit_title{
+	padding-bottom:80px;
+	padding-top:20px;
+}
+
+#edit_title h2{
+	font-size: 3.4rem;
+	color: #fff;
+}
+
+#edit_content{
+	position: relative;
+	background: #fff;
+	border-radius: 12px;
+	padding: 30px;
+	top: -86px;
+}
+
+#question_container fieldset{
+	margin-left: 0;
+}
+
+#question_container h3{
+	font-weight: 300;
+}
+
+
+.overlay{
+	z-index: 1006;
+	border:solid 2px #B2B0AC;
+}
+
+span.close-circle{
+	float: right;
+	position: relative;
+	top: -99px;
+	left: 23px;
+	background: #edeae3;
+	padding: 8px;
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	display: block;
+	border:solid 2px #B2B0AC;
+}
+
+span.close-circle button.close{
+	position: absolute;
+	left: 9px;
+	top: 3px;
+	font-size: 28px;
+	background: transparent;
+	z-index: 2000;
+}
+
+span.close-bg{
+	position: absolute;
+	background: #fff;
+	background: #edeae3;
+	width: 25px;
+	height: 25px;
+	top: -6px;
+	left: -2px;
+	z-index: 1999;
+}
+
+.question_wrap:not(:last-child){
+	margin-bottom: 30px !important;
+}
+
+

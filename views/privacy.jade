@@ -1,0 +1,32 @@
+extends layout_legal
+
+block content
+	// Header Content //
+	include extra/nav-main
+	#main-content
+		article#user_hero
+			.container
+				.span12
+					h2 Legal Documents
+			hr
+		section#content_container
+			.container
+				.row
+					.span12					
+						section#user_content
+							div#content.pad
+								#sub-title
+									section.tabbable.tabs-left
+										ul(class="nav nav-tabs")
+											li
+												a(href="/terms") Terms of Service
+											li(class="active")
+												a(href="/privacy") Privacy
+													span.arrow &rarr;
+										div.tab-content
+
+											div(id="privacy", class="tab-pane active")
+												h3 Concerning our privacy policy
+		.clear
+		// Footer Content //
+	include extra/footer-main

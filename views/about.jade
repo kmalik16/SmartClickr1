@@ -1,0 +1,95 @@
+
+extends layout_about
+
+block content
+	// Header Content //
+	header(class="navbar navbar-inverse navbar-fixed-top")
+		.navbar-inner
+			.container
+				a(class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
+					span(class="icon-bar")
+					span(class="icon-bar")
+					span(class="icon-bar")
+					a(class="brand", href="/") 
+						| SmartClickr
+						span  alpha
+				div(class="nav-collapse")
+					ul(class="nav pull-right")
+						li(class="active")
+							a(id="home", href="/") Home
+						li
+							a(id='features', href='/features') Features
+						li
+							a(id='signup', href='/user/create') Sign Up
+						li
+							a(id='log', href='/login') Log In
+
+	#main-content
+	article#user_hero
+		.container
+			.span12
+				h2 Meet the Team
+		hr
+	section#content_container
+		.container
+			.row-fluid
+				.span12					
+					section#user_content
+						div#content.pad
+							#sub-title
+								h3.hidden-phone The folks behind this thing called SmartClickr
+								h3.visible-phone The folks behind SmartClickr
+
+							p#blurb We are a team of 4 humans who go to school at James Madison University in Virginia. We are on a mission to make the world a better place by creating a service that makes real-time audience interation easy and afforable. 
+							hr.line
+							ul#about-team.clearfix
+								li.span3
+									a.thumb.brad
+										img(src="img/about/brad-fischer.jpg")
+									.team-text
+										h3 Brad Fischer
+										p Server Engineer
+										p
+											a(href="https://twitter.com/BFisch06", target='_blank') @BFisch06
+								li.span3
+									a.thumb.billy
+										img(src="img/about/billy-godfrey.jpg")
+									.team-text
+										h3 Billy Godfrey
+										p Infrastructure Engineer
+										p 
+											a(href="https://twitter.com/godfrewp", target='_blank') @godfrewp
+
+								li.span3
+									a.thumb.daniel
+										img(src="img/about/daniel-to.jpg")
+									.team-text
+										h3 Daniel To
+										p Server-Side Developer
+										p
+											a(href="https://twitter.com/danielto0252", target='_blank') @danielto0252
+								li.span3
+									a.thumb.jimmy
+										img(src="img/about/jimmy-dempsey.jpg")
+									.team-text
+										h3 Jimmy Dempsey
+										p Front-End Developer
+										p
+											a(href="https://twitter.com/thejamesdempsey", target='_blank') @thejamesdempsey
+							hr.line
+							#advisors
+								h4 Faculty Advisors
+								ul.nav.nav-pills
+									li 
+										a Dr Morgan Benton
+									li 
+										a Dr Nicole Radziwill
+									li
+										a Dr Emil Salib
+							
+
+	include extra/footer-main
+
+
+
+	

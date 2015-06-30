@@ -1,0 +1,296 @@
+a.active {
+	color: #fff !important;
+	background: #4c8ab0 !important;
+}
+
+#guide-body .backdrop, #guide-body #guide-nav{
+	background: #F0F0F0;
+}
+
+#guide-body .backdrop{
+	border-radius: 12px 12px 0px 0px;
+}
+
+#guide-body .fixed{
+	margin-right: auto;
+	margin-left: auto;
+	position: fixed !important;
+	float: right;
+	
+}
+
+#navigation{
+	padding-left: 24px;
+}
+
+#navigation li a{
+	color: #0088cc !important;
+}
+
+#navigation li a:hover{
+	color:#3f4b51 !important;
+}
+
+
+#navigation li{
+	list-style: decimal;
+}
+
+#guide-title h3, #guide-body h4{
+	color: #333 !important;
+	font-weight: 300;
+}
+
+#guide-title h3{
+	margin: 0px 20px;
+}
+
+#guide-body p{
+	font-size: 1rem;
+}
+
+.sticky{
+	position: fixed;
+	z-index: 1030;
+	box-shadow: 0 2px 5px #b4b4b4;
+	margin-bottom:0;
+	overflow:visible;
+}
+
+.active{
+	background: #0088cc;
+	color: #fff !important;
+}
+
+.nav-pills > li > a.active:hover{
+	background: #0088cc;
+	color: #fff !important;
+}
+
+.nav-pills > li > a{
+	margin-left: 5px;
+	color: #555;
+}
+
+.sub-wrap{
+	padding-top: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 55px;
+}
+
+.sub-wrap h3{
+	font-weight: 300;
+}
+
+
+#main-content{
+	display: block;
+	position: relative;
+}
+
+#welcome{
+	padding-top: 60px;
+	padding-bottom: 75px;
+}
+
+#guide-sub, #nav-container{
+	margin-left:0;
+}
+
+#guide-body{
+	background: #eee url('/img/noise.png');
+	height: 100%;
+}
+
+#guide-hero{
+	background: #72c1b0;
+	padding-top: 36px;
+	padding-bottom: 22px;
+	border-bottom: 1px solid #fff;
+}
+
+#content_container .backdrop{
+	padding: 0px !important;
+}
+
+#guide-hero h1{
+	font-size: 4rem;
+	color: #fff;
+	font-weight: 100;
+	margin-bottom: 20px;
+}
+
+#guide-title{
+	background-color: #F0F0F0;
+	border-radius: 12px 12px 0px 0px;
+	padding-top: 12px;
+}
+
+#guide-title h2{
+	margin: 0px;
+	
+}
+
+#nav-container{
+	
+}
+
+#guide-nav{
+	padding: 1px 0px 0px 12px;
+	width: 100%;
+}
+
+#guide-nav .nav{
+	margin-bottom: 0px;
+}
+
+#guide-sub{
+	margin-left: 20px;
+	margin-bottom: 60px;
+}
+
+.username, .hashtag{
+	color:#4c8ab0 !important;
+}
+
+
+hr.line{
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	visibility: visible;
+}
+.backdrop{
+	top: -48px !important;
+}
+
+.top-pad{
+	padding-top: 56px;
+}
+
+.help-pad{
+	padding: 40px;
+}
+
+#help-main{
+	background: #fff;
+	border-radius: 12px;
+}
+
+#welcome ol li{
+	list-style: disc;
+}
+
+#qtypes ol li, #presentation ol li{
+	list-style: decimal;
+}
+
+
+#guide-sub .sub-wrap{
+	background-color: #fff;
+	box-shadow: inset 0 0 0 1px #c6c3c3;
+	-webkit-box-shadow: inset 0 0 0 1px #c6c3c3;
+	-moz-box-shadow: inset 0 0 0 1px #c6c3c3;
+	-o-box-shadow: inset 0 0 0 1px #c6c3c3;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-o-border-radius: 12px;
+	padding: 15px;
+	margin: 15px 0;
+	
+}
+
+#welcome ol{
+	list-style: ;
+}
+
+footer{
+	position: relative;
+	bottom:0;
+	z-index: 10;
+	clear: both;
+	top: -68px !important;
+	min-height: 224px;
+	
+}
+
+.clearfix:after{
+	content:".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+
+#guide-body #legal{
+	top: -40px !important;
+	position: relative;
+	padding-bottom: 0px !important;
+}
+
+#legal span{
+	color:#3f4b51 !important;
+	margin-bottom: 15px;
+}
+
+#legal #copy{
+	display: block;
+}
+
+#guide-body #copy a {
+color: 
+#33393D;
+margin-left: 7px;
+margin-right: 5px;
+}
+
+
+#guide-body #social ul li{
+	padding: 12px 12px 12px 0px;
+}
+
+@media screen and (max-width: 1199px){
+	#nav-container{
+		max-width: 940px;
+	}
+}
+
+@media screen and (max-width: 979px){
+	#nav-container{
+		max-width: 724px;
+	}
+}
+
+@media screen and (max-width: 767px){
+	#nav-container{
+		max-width: 100%;
+	}
+	
+	#guide-main{
+		padding: 10px;
+	}
+	
+	#guide-title h3{
+		margin: 0 10px;
+	}
+	#guide-sub{
+		margin: 0 auto;
+		margin-bottom: 60px;
+	}
+	
+	#guide-sub .sub-wrap{
+		padding: 15px 20px;
+	}
+	
+	.sub-wrap h3{
+		font-size: 23.5px;
+	}
+}
+
+@media screen and (min-width:980px){
+	.right{
+		float: right !important;
+	}
+}

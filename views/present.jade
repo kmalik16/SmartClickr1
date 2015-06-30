@@ -1,0 +1,83 @@
+extends layout_present
+
+- user = typeof(udata) != 'undefined' ? udata : {}
+input(type = 'hidden',value = user._id)#userId
+
+block content
+	body#present-page
+		// Header Content //
+		header(class="navbar navbar-inverse navbar-fixed-top")
+			.navbar-inner
+				.container
+					a(class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
+						span(class="icon-bar")
+						span(class="icon-bar")
+						span(class="icon-bar")
+					a(class="brand", href="/") 
+						| SmartClickr
+						span  alpha
+					div(class="nav-collapse")
+						ul(class="nav pull-right")
+							li(class="active")
+								a(id="home", href="/") Home
+		.clear
+		#landing-pad.visible-desktop
+		#landing-container
+			//.container		
+			.row-fluid					
+				#hero_content_present.present-content
+					#content-main
+						.present-titles.clearfix
+							h3(class="span6")  Question #{locals.qdata[0].QuestionsOrder}
+							h3(class="span6 code") Session Code: #{locals.sessionCode}
+
+						h2 #{locals.qdata[0].Stem}
+						input(type='hidden', id='questionID', value='#{locals.qdata[0].Question_ID}')
+						article#graph-display.clearfix
+							div#tabber.tabbable
+								ul.nav.nav-tabs
+									li#tab-pie.pie-chart.active
+										a(href="#pie-display", data-toggle="tab") Pie Chart
+									li#tab-bar.bar-chart
+										a(href="#bar-display", data-toggle="tab") Bar Chart
+								//	li#tab-cloud.word-cloud
+								//		a(href="#cloud-display", data-toggle="tab", class="disabled") Word Cloud
+								div.tab-content
+									div#pie-display.tab-pane.active.clearfix
+									div#bar-display.tab-pane.clearfix
+								//	div#cloud-display.tab-pane.clearfix
+								//		p I am a word cloud
+
+				#present-actions.clearfix
+					ul.pager.span4.offset4
+						if locals.qdata[0].Question_ID == locals.QuestionIDs[locals.QuestionIDs.length - 1]
+							li.previous
+								a(id='starting-question', href='/user/#{locals.udata}/poll/#{locals.pdata}/question/present/#{locals.QuestionIDs[locals.qdata[0].QuestionsOrder - 2]}', class="") &larr; Previous
+							li.next
+								a(id='last-question', href='/user/#{locals.udata}/poll/#{locals.pdata}/present/final', class="") Finish &rarr;
+						else if locals.qdata[0].Question_ID != locals.QuestionIDs[0]
+							li.previous
+								a(id='starting-question', href='/user/#{locals.udata}/poll/#{locals.pdata}/question/present/#{locals.QuestionIDs[locals.qdata[0].QuestionsOrder - 2]}', class="") &larr; Previous
+							li.next
+								a(id='starting-question', href='/user/#{locals.udata}/poll/#{locals.pdata}/question/present/#{locals.QuestionIDs[locals.qdata[0].QuestionsOrder]}', class="") Next &rarr;
+						else if locals.qdata[0].Question_ID == locals.QuestionIDs[0]
+							li.previous
+								a(id='starting-question', href='/', class="disabled")&larr; Home
+							li.next
+								a(id='starting-question', href='/user/#{locals.udata}/poll/#{locals.pdata}/question/present/#{locals.QuestionIDs[locals.qdata[0].QuestionsOrder]}', class="") Next &rarr;
+
+	script
+		var dataPath = '/user/' + #{locals.udata} + '/poll/' + #{locals.pdata} + '/question/' + #{locals.qdata[0].Question_ID} + '.json';
+		
+		d3.json(dataPath, function(json) {
+			pieChart(json, dataPath);
+			verticalBars(json, dataPath);
+		});
+
+	script(src='/javascript/d3/resize.js')
+
+
+
+
+
+
